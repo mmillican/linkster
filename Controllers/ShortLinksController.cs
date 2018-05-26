@@ -25,6 +25,18 @@ namespace Linkster.Controllers
             this._dbContext = new DynamoDBContext(this._dynamoDbClient, new DynamoDBContextConfig { Conversion = DynamoDBEntryConversion.V2 });
         }
 
+        [HttpGet("/l/{key}")]
+        public async Task<IActionResult> GoToLink(string key)
+        {
+            var link = await _dbContext.LoadAsync<ShortLink>(key);
+            if (link != null)
+            {
+                return Redirect(link.DestinationUrl);
+            }
+
+            return NotFound();
+        }
+
         [HttpGet("")]
         public async Task<IActionResult> Index()
         {

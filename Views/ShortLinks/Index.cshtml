@@ -18,7 +18,9 @@
     @foreach(var link in Model.Links)
     {
         <tr>
-            <td>@link.Key</td>
+            <td>
+                <a asp-action="GoToLink" asp-route-key="@link.Key">@link.Key</a>
+            </td>
             <td>@link.DestinationUrl</td>
             <td>@link.Created</td>
         </tr>
