@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.8" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 

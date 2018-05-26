@@ -1,6 +1,6 @@
 using System;
 
-namespace linkster.Models
+namespace Linkster.Models
 {
     public class ErrorViewModel
     {

@@ -4,9 +4,9 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using linkster.Models;
+using Linkster.Models;
 
-namespace linkster.Controllers
+namespace Linkster.Controllers
 {
     public class HomeController : Controller
     {
