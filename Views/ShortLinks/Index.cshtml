@@ -1,0 +1,26 @@
+@model Linkster.ViewModels.Links.ShortLinkListViewModel 
+
+<h1>Short Links</h1>
+
+<form asp-controller="ShortLinks" asp-action="Create">
+    <input type="text" asp-for="NewLink.DestinationUrl" class="form-control" />
+
+    <button type="submit" class="btn btn-success">Create</button>
+</form>
+
+
+<table class="table table-condensed table-striped">
+    <tr>
+        <th>Short URL</th>
+        <th>Destination</th>
+        <th>Created</th>
+    </tr>
+    @foreach(var link in Model.Links)
+    {
+        <tr>
+            <td>@link.Key</td>
+            <td>@link.DestinationUrl</td>
+            <td>@link.Created</td>
+        </tr>
+    }
+</table>
