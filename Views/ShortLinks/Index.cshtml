@@ -2,12 +2,12 @@
 
 <h1>Short Links</h1>
 
-<form asp-controller="ShortLinks" asp-action="Create">
-    <input type="text" asp-for="NewLink.DestinationUrl" class="form-control" />
-
-    <button type="submit" class="btn btn-success">Create</button>
+<form asp-controller="ShortLinks" asp-action="Create" class="form-inline" style="margin-bottom: 10px; width: 100%;">
+    <div class="form-group" style="width: 60%;">
+        <input type="text" asp-for="NewLink.DestinationUrl" class="form-control input-lg" style="width: 100%;" placeholder="URL to shorten" />
+    </div> 
+    <button type="submit" class="btn btn-lg btn-success">Create</button>
 </form>
-
 
 <table class="table table-condensed table-striped">
     <tr>
