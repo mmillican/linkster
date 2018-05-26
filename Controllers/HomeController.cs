@@ -12,7 +12,8 @@ namespace Linkster.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            return RedirectToAction(nameof(ShortLinksController.Index), "ShortLinks");
+            // return View();
         }
 
         public IActionResult Privacy()
